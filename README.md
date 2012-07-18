@@ -11,13 +11,11 @@ If you want to know what cucumber and this framework exactly does with a drupal 
 ## Prerequisites
 
 You must have Ruby and Rubygems installed.  Use [RVM](http://beginrescueend.com/rvm/install "Ruby Version Manager") to install it.  You'll need 
-FireFox and also the following gems:
+FireFox and bundler:
 
-* selenium-webdriver
-* rspec
-* cucumber
-* capybara
-* gherkin
+## Install
+
+$ bundle install
 
 Drop me a message if you encounter errors (Email below).
 
@@ -26,11 +24,10 @@ Drop me a message if you encounter errors (Email below).
 This module will give the active iframe an ID, so that cucumber can execute the "within_frame" method.
 
 Without this module, default drupal overlays will not be testable.
- 
 
 ## Setup
 
-You can change the basic settings in the file `tasks/setup.rb`
+Copy the tasks/settings.rb.example file over to tasks/settings.rb and edit the follow:
 
 * `DRUPAL_BASE_PATH`: the URL to your drupal installation (e.g localhost/yourapp or yourapp.com)
 * `DRUPAL_DRIVER`: the driver used to test the app.  Only supported driver for now is Selenium (and is most tested solution)
